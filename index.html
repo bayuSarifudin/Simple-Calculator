@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Kalkulator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Simple Web Based Calculator</h1>
+    <p class="warning">Don't Divide by Zero</p>
+
+    <div class="calculator">
+        <!-- input number -->
+        <input type="text" class="calculator-screen" value="0" disabled>
+
+        <!-- input button -->
+        <div class="calculator-keys">
+            <!-- upper row (AC, percentage, &divide;) -->
+            <div class="row">
+                <button class="all-clear">AC</button>
+                <button class="percentage">%</button>
+                <button class="operator" value="/">&divide;</button>
+            </div>
+            <!-- second row (7, 8, 9, x) -->
+            <div class="row">
+                <button class="number" value="7">7</button>
+                <button class="number" value="8">8</button>
+                <button class="number" value="9">9</button>
+                <button class="operator" value="*">&times;</button>
+            </div>
+            <!-- third row (4, 5, 6, -)  -->
+            <div class="row">
+                <button class="number" value="4">4</button>
+                <button class="number" value="5">5</button>
+                <button class="number" value="6">6</button>
+                <button class="operator" value="-">-</button>
+            </div>
+            <!-- fourth row (1, 2, 3, +)  -->
+            <div class="row">
+                <button class="number" value="1">1</button>
+                <button class="number" value="2">2</button>
+                <button class="number" value="3">3</button>
+                <button class="operator" value="+">+</button>
+            </div>
+            <!-- fifth row (0, ., =)  -->
+            <div class="row">
+                <button class="number zero-btn" value="0">0</button>
+                <button class="decimal" value=".">.</button>
+                <button class="equal-sign">=</button>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="reset hide" id="reset">Reset Calculator?</h2>
+
+    <script src="script.js"></script>
+</body>
+</html>

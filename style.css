@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	overflow: hidden;
+	margin: 0;
+	color: #6cacc5;
+	background-color: #2b1f44;
+	background-image: radial-gradient(
+			50% 30% ellipse at center top,
+			#201e40 0%,
+			rgba(0, 0, 0, 0) 100%
+		),
+		radial-gradient(60% 50% ellipse at center bottom, #261226 0%, #100a1c 100%);
+}
+
+/* text style  */
+h1 {
+	font-weight: 300;
+	margin: 0;
+}
+
+.warning {
+	background: -webkit-linear-gradient(45deg, #c97874 10%, #463042 90%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: #8c5059;
+	font-weight: 400;
+	margin: 0 auto 6em;
+	max-width: 9em;
+}
+
+/* calculator  */
+.calculator {
+	text-align: center;
+	margin: 0 auto;
+	width: 400px;
+	box-shadow: 10px 10px #6cacc5;
+}
+
+/* bagian input  */
+.calculator-screen {
+	width: 100%;
+	height: 100px;
+	background-color: #252525;
+	color: #6cacc5;
+	text-align: right;
+	font-size: 36px;
+	border: none;
+	padding: 0 20px;
+	box-sizing: border-box;
+}
+
+/* tombol general  */
+.calculator-keys {
+	width: 100%;
+}
+
+/* bagian colom  */
+.row {
+	display: flex;
+}
+
+/* tombol  */
+button {
+	height: 80px;
+	margin: 0px;
+	background-color: gray;
+	border: 1px solid black;
+	font-size: 32px;
+	color: #fff;
+	width: 25%;
+	outline: none;
+	transition: all 0.5s;
+}
+
+.all-clear,
+.zero-btn {
+	width: 50%;
+}
+
+.operator,
+.equal-sign {
+	background-color: orange;
+}
+
+/* hovered part  */
+button:hover {
+	background-color: darkgrey;
+}
+
+.operator:hover,
+.equal-sign:hover {
+	background-color: darkorange;
+}
+
+/* reset button  */
+h2.reset.hide {
+	display: none;
+}
+
+h2.reset.show {
+	background: rgba(201, 120, 116, .28);
+	color: #c97874;
+	font-weight: 400;
+	padding: 0.5em 1em;
+	width: auto;
+	height: auto;
+	animation: fadein 4s;
+	cursor: pointer;
+}
+
+@keyframes fadein {
+	0% {
+		top: 20em;
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+/* broken  */
+.broken {
+	animation: broken 2s;
+	transform: translate3d(0, -2000px, 0);
+	opacity: 0;
+}
+
+@keyframes broken {
+	0% {
+		transform: translate3d(0, 0, 0);
+		opacity: 1;
+	}
+
+	5% {
+		transform: rotate(5deg);
+	}
+
+	15% {
+		transform: rotate(-5deg);
+	}
+
+	20% {
+		transform: rotate(5deg);
+	}
+
+	25% {
+		transform: rotate(-5deg);
+	}
+
+	50% {
+		transform: rotate(45deg);
+	}
+
+	70% {
+		transform: translate3d(0, 2000px, 0);
+		opacity: 1;
+	}
+
+	75% {
+		opacity: 0;
+	}
+
+	100% {
+		transform: translate3d(0, -2000px, 0);
+	}
+}
